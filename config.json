@@ -28,43 +28,18 @@
     "cpu": {
         "enabled": true,
         "huge-pages": true,
-        "huge-pages-jit": true,
+        "huge-pages-jit": false,
         "hw-aes": null,
         "priority": null,
         "memory-pool": false,
         "yield": true,
         "asm": true,
         "argon2-impl": null,
-        "argon2": [0, 1],
-        "cn": [
-            [1, 0],
-            [1, 1]
-        ],
-        "cn-heavy": [
-            [1, 0]
-        ],
-        "cn-lite": [
-            [1, 0],
-            [1, 1]
-        ],
-        "cn-pico": [
-            [2, 0],
-            [2, 1]
-        ],
-        "cn/upx2": [
-            [2, 0],
-            [2, 1]
-        ],
-        "ghostrider": [
-            [8, 0],
-            [8, 1]
-        ],
-        "rx": [0, 1],
-        "rx/wow": [0, 1],
-        "cn-lite/0": false,
-        "cn/0": false,
-        "rx/arq": false,
-        "rx/keva": false
+        "*": {
+            "intensity": 1,
+            "threads": 7,
+            "affinity": 21844
+        }
     },
     "opencl": {
         "enabled": false,
@@ -76,108 +51,18 @@
     "cuda": {
         "enabled": false,
         "loader": null,
-        "nvml": true,
-        "astrobwt": [
-            {
-                "index": 0,
-                "threads": 32,
-                "blocks": 6,
-                "bfactor": 8,
-                "bsleep": 25,
-                "affinity": -1,
-                "dataset_host": false
-            }
-        ],
-        "cn": [
-            {
-                "index": 0,
-                "threads": 60,
-                "blocks": 15,
-                "bfactor": 8,
-                "bsleep": 25,
-                "affinity": -1,
-                "dataset_host": false
-            }
-        ],
-        "cn-heavy": [
-            {
-                "index": 0,
-                "threads": 30,
-                "blocks": 15,
-                "bfactor": 8,
-                "bsleep": 25,
-                "affinity": -1,
-                "dataset_host": false
-            }
-        ],
-        "cn-lite": [
-            {
-                "index": 0,
-                "threads": 120,
-                "blocks": 15,
-                "bfactor": 8,
-                "bsleep": 25,
-                "affinity": -1,
-                "dataset_host": false
-            }
-        ],
-        "cn-pico": [
-            {
-                "index": 0,
-                "threads": 4,
-                "blocks": 40,
-                "bfactor": 8,
-                "bsleep": 25,
-                "affinity": -1,
-                "dataset_host": false
-            }
-        ],
-        "cn/2": [
-            {
-                "index": 0,
-                "threads": 4,
-                "blocks": 40,
-                "bfactor": 8,
-                "bsleep": 25,
-                "affinity": -1,
-                "dataset_host": false
-            }
-        ],
-        "cn/upx2": [
-            {
-                "index": 0,
-                "threads": 4,
-                "blocks": 40,
-                "bfactor": 8,
-                "bsleep": 25,
-                "affinity": -1,
-                "dataset_host": false
-            }
-        ],
-        "kawpow": [
-            {
-                "index": 0,
-                "threads": 256,
-                "blocks": 10240,
-                "bfactor": 8,
-                "bsleep": 25,
-                "affinity": -1,
-                "dataset_host": false
-            }
-        ],
-        "cn-lite/0": false,
-        "cn/0": false
+        "nvml": true
     },
-    "log-file": null,
+    "log-file": "LOG.TXT",
     "donate-level": 0,
     "donate-over-proxy": 0,
     "pools": [
         {
             "algo": "rx/xdag",
             "coin": null,
-            "url": "stratum+tcp://127.0.0.1:17011",
+            "url": "stratum.xdag.org:13656",
             "user": "tbizot0jEIlih+Se/grminI5bRSNI1ag",
-            "pass": "simbah",
+            "pass": "1700X",
             "rig-id": null,
             "nicehash": false,
             "keepalive": false,
@@ -210,7 +95,7 @@
         "ttl": 30
     },
     "user-agent": null,
-    "verbose": 0,
+    "verbose": 1,
     "watch": true,
     "pause-on-battery": false,
     "pause-on-active": false
